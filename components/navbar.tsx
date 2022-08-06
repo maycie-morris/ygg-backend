@@ -1,11 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { ReactNode } from 'react';
 import {
   Box,
   Flex,
   Avatar,
   HStack,
-  Link,
   IconButton,
   Button,
   Menu,
@@ -21,18 +21,37 @@ import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import YGGLogo from '../images/ygg_shield.png';
 
-const Links = ['About', 'Games', 'Founders'];
+// const Links = ['About', 'Games', 'Founders'];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const Links = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'About',
+    path: '/about',
+  },
+  {
+    name: 'Games',
+    path: '/games',
+  },
+  {
+    name: 'Founders',
+    path: '/founders',
+  },
+];
+
+const NavLink = ({ children, path }: { children: ReactNode; path: string }) => (
   <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
-    href={'#'}
+    // px={2}
+    // py={1}
+    // rounded={'md'}
+    // _hover={{
+    // textDecoration: 'none',
+    // bg: useColorModeValue('gray.200', 'gray.700'),
+    // }}
+    href={path}
   >
     {children}
   </Link>
@@ -74,8 +93,10 @@ export const Navbar = () => {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}
             >
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {Links.map(({ name, path }) => (
+                <NavLink key={path} path={path}>
+                  {name}
+                </NavLink>
               ))}
             </HStack>
           </HStack>
@@ -116,8 +137,10 @@ export const Navbar = () => {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {Links.map(({ name, path }) => (
+                <NavLink key={path} path={path}>
+                  {name}
+                </NavLink>
               ))}
             </Stack>
           </Box>
