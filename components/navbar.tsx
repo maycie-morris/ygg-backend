@@ -43,18 +43,9 @@ const Links = [
 ];
 
 const NavLink = ({ children, path }: { children: ReactNode; path: string }) => (
-  <Link
-    // px={2}
-    // py={1}
-    // rounded={'md'}
-    // _hover={{
-    // textDecoration: 'none',
-    // bg: useColorModeValue('gray.200', 'gray.700'),
-    // }}
-    href={path}
-  >
-    {children}
-  </Link>
+  <Box>
+    <Link href={path}>{children}</Link>
+  </Box>
 );
 
 export const Navbar = () => {
@@ -64,12 +55,12 @@ export const Navbar = () => {
 
   return (
     <>
-      <Box bg='#9ca4cb49' padding={'0 3%'}>
+      <Box bg='#9ca4cb35' padding={'0 3%'}>
         <Flex
           h={16}
           alignItems={'center'}
           justifyContent={'space-between'}
-          height='10vh'
+          height='8vh'
         >
           <IconButton
             size={'md'}

@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300&family=Source+Code+Pro&display=swap');
+
+:root {
+  --main-font-familly: 'Red Hat Text', sans-serif;
+  --secondary-font-family: 'Source Code Pro', monospace;
+
+  --border-radius: 10px;
+
+  --black-text: #3a3a3a;
+  --blue: rgba(0, 34, 144, 0.777);
+  --btn-gradient: linear-gradient(
+    to right,
+    rgba(0, 34, 144, 0.777),
+    rgba(117, 0, 10, 0.767)
+  );
+  --header-text-color: #322b74;
+  --red: rgba(117, 0, 10, 0.767);
+  --white-text: #ffffff;
+
+  --translucent-white: #9ca4cb49;
+}
+
 html,
 body {
   padding: 0;
@@ -14,23 +36,87 @@ a {
   box-sizing: border-box;
 }
 
+body.chakra-ui-light {
+  background-image: linear-gradient(
+    to right top,
+    #ffffff,
+    #f4f4fc,
+    #e9e9f9,
+    #dcdff6,
+    #ced5f3,
+    #ccd5f3,
+    #cad4f4,
+    #c8d4f4,
+    #d3dcf7,
+    #dee5fa,
+    #e8edfc,
+    #f3f6ff
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--black-text);
+  font-family: 'Red Hat Text', sans-serif;
+  margin: 0;
+  min-height: 82vh;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* HOME PAGE */
+
+#header {
+  width: 100%;
+}
+
+#header h1 {
+  color: var(--header-text-color);
+  font-size: 2.8em;
+  font-weight: bold;
+}
+
+#home_btn_container {
+  margin-top: 2%;
+}
+
+#home_container {
+  align-items: flex-start;
+  background-image: url('../images/background.png');
+  background-position: 800px 50%;
+  background-repeat: no-repeat;
+  background-size: 70vh;
+  justify-content: center;
+  height: 82vh;
+}
+
+#home_contents {
+  align-items: flex-start;
+  color: var(--black-text);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin-top: 1%;
+  width: 80%;
+}
+
+#home_span1 {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 1%;
+  width: 100%;
+}
+
+#home_span2 {
+  font-family: var(--secondary-font-family);
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 .connect_btn_container {
   display: flex;
   justify-content: flex-end;
   margin-right: 10%;
   width: 440px;
-}
-
-/* [data-rk] .ju367va {
-  align-items: center;
-} */
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }

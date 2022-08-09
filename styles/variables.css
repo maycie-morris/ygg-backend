@@ -1,0 +1,19 @@
+:root {
+  --main-font-familly: 'Red Hat Text', sans-serif;
+  --secondary-font-family: 'Source Code Pro', monospace;
+
+  --border-radius: 10px;
+
+  --black-text: #3a3a3a;
+  --blue: rgba(0, 34, 144, 0.777);
+  --btn-gradient: linear-gradient(
+    to right,
+    rgba(0, 34, 144, 0.777),
+    rgba(117, 0, 10, 0.767)
+  );
+  --header-text-color: #322b74;
+  --red: rgba(117, 0, 10, 0.767);
+  --white-text: #ffffff;
+
+  --translucent-white: #9ca4cb49;
+}

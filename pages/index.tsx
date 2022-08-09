@@ -3,9 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
 // Components
-import { Layout } from '../components/layout';
-import { Navbar } from '../components/navbar';
-import { Footer } from '../components/footer';
+import HomePage from './home';
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +13,9 @@ const Home: NextPage = () => {
         <meta name='description' content='Yield Guild Games' />
         <link rel='icon' href='/ygg_shield.png' />
       </Head>
-      <Layout />
+      <>
+        <HomePage />
+      </>
     </div>
   );
 };
