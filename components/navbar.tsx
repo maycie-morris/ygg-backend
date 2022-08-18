@@ -21,8 +21,6 @@ import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import YGGLogo from '../images/ygg_shield.png';
 
-// const Links = ['About', 'Games', 'Founders'];
-
 const Links = [
   {
     name: 'Home',
@@ -39,6 +37,10 @@ const Links = [
   {
     name: 'Founders',
     path: '/founders',
+  },
+  {
+    name: 'FAQ',
+    path: '/faq',
   },
 ];
 
@@ -113,14 +115,13 @@ export const Navbar = () => {
                   }
                 />
               </MenuButton>
-              <MenuList>
+              {/* <MenuList>
                 <MenuItem>News</MenuItem>
                 <MenuItem>FAQ</MenuItem>
-                {/* <MenuDivider /> */}
                 <MenuItem>Partnership</MenuItem>
                 <MenuItem>Investment</MenuItem>
                 <MenuItem>Careers</MenuItem>
-              </MenuList>
+              </MenuList> */}
             </Menu>
           </Flex>
         </Flex>

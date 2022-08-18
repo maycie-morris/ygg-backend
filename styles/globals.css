@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300&family=Source+Code+Pro&display=swap');
 
 :root {
@@ -114,9 +118,89 @@ body.chakra-ui-light {
   letter-spacing: 2px;
 }
 
+/* GAMES */
+
+#card_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#games_container {
+  height: auto;
+}
+
+.card {
+  align-items: center !important;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  color: black;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3%;
+  min-height: 20vw;
+  padding: 3%;
+  width: 20vw;
+}
+
+.card img {
+  border-radius: 10px;
+  height: auto;
+  width: 15vw;
+}
+
+.container {
+  min-height: 84vh;
+  padding: 3%;
+}
+
 .connect_btn_container {
   display: flex;
   justify-content: flex-end;
   margin-right: 10%;
   width: 440px;
+}
+
+.expand p {
+  background-color: rgba(255, 255, 255, 0.476);
+  border-radius: var(--border-radius);
+  color: var(--black-text);
+  font-weight: bold;
+  line-height: 150%;
+  margin: 5% auto 0;
+  padding: 20px;
+}
+
+.fi_img {
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 95vw;
+}
+
+.header h1 {
+  font-size: 2.8em;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.subcontainer {
+  align-items: center;
+  display: flex;
+}
+
+.text_container {
+  margin-right: 5%;
+}
+
+.text_container h3 {
+  color: var(--blue);
+  font-size: 2em;
+}
+
+.text_container p {
+  font-size: 1.1em;
+  line-height: 20px;
+  margin: 3% 0;
 }
